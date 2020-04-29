@@ -1,0 +1,21 @@
+extends layout
+
+block content
+    +head("New Service")
+    include nav.pug
+    +nav()
+    body.background
+        div.container
+            div.row
+                div.col-sm-9.col-md-7.col-lg-5.mx-auto
+                    div.card.card-signin.my-5
+                        div.card-body
+                            h5.card-title.text-center.gotham-bold Add New Service
+                            form.form-signin#register-form(method='POST' action='/services/add')
+                                div.form-label-group.mb-2
+                                    label(for="ServiceType") What is the type of service
+                                    input.form-control(type="text" id="ServiceType" placeholder="Type" name="ServiceType" required)
+                                div.form-label-group.mb-2
+                                    label(for="price") Price
+                                    input.form-control(type="text" id="Price" placeholder="Price" name="Price" required)
+                                input.btn.btn-lg.btn-primary.btn-block.text-uppercase(type="submit" value="Add Service")

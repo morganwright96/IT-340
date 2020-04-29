@@ -1,0 +1,22 @@
+mixin nav(nav)
+    div.bg-brand
+        div.container
+            nav.navbar.navbar-expand-lg.bg-brand.navbar-dark
+                a.navbar-brand Computers by Morgan
+                button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
+                    span.navbar-toggler-icon
+                div.collapse.navbar-collapse#navbarSupportedContent
+                    ul.navbar-nav.mr-auto
+                        li.nav-item.active
+                            a.nav-link(href="/") Home 
+                                span.sr-only (current)
+                        li.nav-item
+                            a.nav-link(href="#") FIXME
+                        li.nav-item.dropdown
+                            a.nav-link.dropdown-toggle(href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Services
+                            div.dropdown-menu(aria-labelledby="navbarDropdown")
+                                a.dropdown-item(href="/services/add") New Service
+                                a.dropdown-item(href="/services/computer") New Custom Computer
+                                a.dropdown-item(href="#") New Custom Website
+                                a.dropdown-item(href="/services/subscription/") Add Subscriptions
+                    a#login-btn.nav-link.link-no-style.p-0(href="/users/login") Login

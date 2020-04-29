@@ -1,0 +1,91 @@
+extends layout
+
+block content
+    +head("Register")
+    include nav.pug
+    +nav()
+    body.background
+        div.container
+            div.row
+                div.col-sm-9.col-md-7.col-lg-5.mx-auto
+                    div.card.card-signin.my-5
+                        div.card-body
+                            h5.card-title.text-center.gotham-bold Register
+                            form.form-signin#register-form(method='POST' action='/users/register' oninput='passConfirm.setCustomValidity(passConfirm.value != pass.value ? "Passwords do not match." : "")')
+                                div.form-label-group.mb-2
+                                    label(for="username") Username
+                                    input.form-control(type="text" id="username" placeholder="Username" name="username" required)
+                                div.form-label-group.mb-2
+                                    label(for="inputPassword") Password
+                                    input.form-control(type="password" id="Password" placeholder="Password" name="pass" required)
+                                div.form-label-group.mb-2
+                                    label(for="inputPassword") Confirm Password
+                                    input.form-control(type="password" id="confirmPassword" placeholder="Password" name="passConfirm" required)
+                                div.form-label-group.mb-2
+                                    label(for="inputEmail") Email address
+                                    input.form-control(type="email" id="inputEmail" placeholder="Email" name="email" required)
+                                div.form-label-group.mb-2
+                                    label Additional Infomation
+                                    input.form-control.mb-2(type="text" id="fname" placeholder="First Name" name="fname" required)
+                                    input.form-control.mb-2(type="text" id="lname" placeholder="Last Name" name="lname" required)
+                                    input.form-control.mb-2(type="text" id="address" placeholder="Address" name="address" required)
+                                    input.form-control.mb-2(type="text" id="apt" placeholder="Building, Apartment" name="apt")
+                                    select.mb-2(name="state")
+                                        option(value="AL") Alabama
+                                        option(value="AK") Alaska
+                                        option(value="AZ") Arizona
+                                        option(value="AR") Arkansas
+                                        option(value="CA") California
+                                        option(value="CO") Colorado
+                                        option(value="CT") Connecticut
+                                        option(value="DE") Delaware
+                                        option(value="DC") District Of Columbia
+                                        option(value="FL") Florida
+                                        option(value="GA") Georgia
+                                        option(value="HI") Hawaii
+                                        option(value="ID") Idaho
+                                        option(value="IL") Illinois
+                                        option(value="IN") Indiana
+                                        option(value="IA") Iowa
+                                        option(value="KS") Kansas
+                                        option(value="KY") Kentucky
+                                        option(value="LA") Louisiana
+                                        option(value="ME") Maine
+                                        option(value="MD") Maryland
+                                        option(value="MA") Massachusetts
+                                        option(value="MI") Michigan
+                                        option(value="MN") Minnesota
+                                        option(value="MS") Mississippi
+                                        option(value="MO") Missouri
+                                        option(value="MT") Montana
+                                        option(value="NE") Nebraska
+                                        option(value="NV") Nevada
+                                        option(value="NH") New Hampshire
+                                        option(value="NJ") New Jersey
+                                        option(value="NM") New Mexico
+                                        option(value="NY") New York
+                                        option(value="NC") North Carolina
+                                        option(value="ND") North Dakota
+                                        option(value="OH") Ohio
+                                        option(value="OK") Oklahoma
+                                        option(value="OR") Oregon
+                                        option(value="PA") Pennsylvania
+                                        option(value="RI") Rhode Island
+                                        option(value="SC") South Carolina
+                                        option(value="SD") South Dakota
+                                        option(value="TN") Tennessee
+                                        option(value="TX") Texas
+                                        option(value="UT") Utah
+                                        option(value="VT") Vermont
+                                        option(value="VA") Virginia
+                                        option(value="WA") Washington
+                                        option(value="WV") West Virginia
+                                        option(value="WI") Wisconsin
+                                        option(value="WY") Wyoming
+                                    input.form-control.mb-2(type="number" id="zip" placeholder="Zip" name="zip" required)
+                                    input.form-control.mb-2(type="tel" id="phone-number" placeholder="Phone Number" name="phone" required)
+                                    input.form-control.mb-2(type="text" id="country" placeholder="Country" name="country" required)
+                                div.form-label-group.mb-2
+                                    p Have An Account? 
+                                        a(href='/users/login') Login
+                                input.btn.btn-lg.btn-primary.btn-block.text-uppercase(type="submit" value="Login")

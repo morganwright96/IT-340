@@ -1,0 +1,18 @@
+extends layout
+
+block content
+    +head("New Subscription")
+    include nav.pug
+    +nav()
+    body.background
+        div.container
+            div.row
+                div.col-sm-9.col-md-7.col-lg-5.mx-auto
+                    div.card.card-signin.my-5
+                        div.card-body
+                            h5.card-title.text-center.gotham-bold Add Subscription To User
+                            form.form-signin#register-form(method='POST' action='#')
+                                div.form-label-group.mb-2#User-select
+                                    p This will add the subscription to the logged in user
+                                    p This is the current User #{name}. With the username of #{username}
+                                input.btn.btn-lg.btn-primary.btn-block.text-uppercase(type="submit" value="Add Service")

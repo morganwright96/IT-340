@@ -1,0 +1,36 @@
+extends layout
+
+block content
+    +head("Register")
+    include nav.pug
+    +nav()
+    body.background
+        div.container
+            div.row
+                div.col-sm-9.col-md-7.col-lg-5.mx-auto
+                    div.card.card-signin.my-5
+                        div.card-body
+                            h5.card-title.text-center.gotham-bold Register
+                            form.form-signin#register-form(method='POST' action='/services/computer')
+                                div.form-label-group.mb-2
+                                    label(for="type") Would you like a Laptop, Desktop, Tablet, Other? 
+                                    input.form-control(type="text" id="type" placeholder="Type" name="Type" required)
+                                div.form-label-group.mb-2
+                                    label(for="memory") How much RAM do you want? 
+                                    input.form-control(type="text" id="memory" placeholder="8 GB of DDR4 RAM" name="Memory")
+                                div.form-label-group.mb-2
+                                    label(for="processor") What type of Processor do you want? 
+                                    input.form-control(type="text" id="processor" placeholder="Intel i7 8th Generation" name="Processor")
+                                div.form-label-group.mb-2
+                                    label(for="graphics") What type of Graphics Card do you want? (optional)
+                                    input.form-control(type="text" id="graphics" placeholder="Optional" name="Graphics")
+                                div.form-label-group.mb-2
+                                    label(for="storage") How large of a hard drive would you like?
+                                    input.form-control.mb-2(type="text" id="storage" placeholder="256 GB SSD" name="Storage")
+                                div.form-label-group.mb-2
+                                    label(for="OS") What operating system would you like?
+                                    input.form-control.mb-2(type="text" id="OS" placeholder="Windows 10 Home" name="OS" )
+                                div.form-label-group.mb-2
+                                    label(for="notes") Notes: (Max 200 Characters)
+                                    textarea.form-control.mb-2(id="notes", placeholder="Optional" rows="3", name="Notes" maxlength="200")
+                                input.btn.btn-lg.btn-primary.btn-block.text-uppercase(type="submit" value="Order")

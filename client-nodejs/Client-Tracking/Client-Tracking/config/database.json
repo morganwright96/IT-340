@@ -1,0 +1,29 @@
+{
+  "development": {
+    "username": "computer_morgan",
+    "password": "wearewright1",
+    "database": "computer_by_morgan_client_info",
+    "host": "206.189.229.100",
+    "port": "3306",
+    "dialect": "mysql",
+    "operatorsAliases": false
+  },
+  "test": {
+    "username": "computer_morgan",
+    "password": "wearewright1",
+    "database": "computer_by_morgan_client_info",
+    "host": "206.189.229.100",
+    "port": "3306",
+    "dialect": "mysql",
+    "operatorsAliases": false
+  },
+  "production": {
+    "username": "computer_morgan",
+    "password": "wearewright1",
+    "database": "computer_by_morgan_client_info",
+    "host": "206.189.229.100",
+    "port": "3306",
+    "dialect": "mysql",
+    "operatorsAliases": false
+  }
+}

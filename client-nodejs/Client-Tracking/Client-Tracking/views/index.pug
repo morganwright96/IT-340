@@ -1,0 +1,31 @@
+extends layout
+
+block content
+    +head("Home")
+    include nav.pug
+    +nav()
+    div.container
+        div.jumbotron.mt-3
+            h1.text-center Welcome To Morgan's Client Tracking System
+            h5.text-center This is a development site and dosen't contain and actual data
+        div.album.py-5.bg-light
+            div.container
+                div.row
+                    div.col-md-4
+                        div.card.mb-4.box-shadow
+                            div.card-body
+                                h3 Services
+                                p Look at past services
+                                a.btn.btn-info(href="/services/all" role="button") Go
+                    div.col-md-4
+                        div.card.mb-4.box-shadow
+                            div.card-body
+                                h3 Supscription
+                                p Look at your current subscriptions
+                                a.btn.btn-info(href="/services/subscription/all" role="button") Go
+                    div.col-md-4
+                        div.card.mb-4.box-shadow
+                            div.card-body
+                                h3 Computer Orders
+                                p Look at past computer orders
+                                a.btn.btn-info(href="/services/computer/all" role="button") Go
